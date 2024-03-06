@@ -93,4 +93,13 @@ public class MysqlCont {
 
         return "success";
     }
+
+    /*
+    127.0.0.1:8080/MysqlCont/test3
+     */
+    @RequestMapping("test3")
+    public void Test3(){
+        x2 x2 = c.findById("200").orElseThrow(() -> new RuntimeException("查無使用者"));
+        System.out.println(x2.getName());
+    }
 }
